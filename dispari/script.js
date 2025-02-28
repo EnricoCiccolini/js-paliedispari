@@ -7,13 +7,13 @@
 
 
 let pcRandomNumber1to5
-let userChoice 
+let userChoice
 let userNumber
 let somma
 userChoice = prompt('scegli pari o dispari ')
 userNumber = prompt(' scegli un numero da 1 a 5')
 userNumber = parseInt(userNumber)
-pcRandomNumber1to5 = Math.floor(Math.random() * 5)+1
+pcRandomNumber1to5 = Math.floor(Math.random() * 5) + 1
 somma = userNumber + pcRandomNumber1to5
 console.log(userNumber)
 console.log(pcRandomNumber1to5)
@@ -21,31 +21,33 @@ console.log(somma)
 
 
 
-function numberIsOdd(numberToCecked){
+function numberIsOdd(numberToCecked) {
 
-    return numberToCecked %2 !== 0
+    return numberToCecked % 2 !== 0
 }
-  
+
 let checked = numberIsOdd(somma)
 
-
-if (checked){
-    if(userChoice === ('dispari') ){
-        console.log(' complimenti hai vinto ')
-    }else{
-        console.log(' mi spiace hai perso ')
+if (userNumber <= 0 || userNumber > 5 || isNaN(userNumber))
+    { console.log('inserisci un numero valido') }
+else {
+    if (checked) {
+        if (userChoice === ('dispari')) {
+            console.log(' complimenti hai vinto ')
+        } else {
+            console.log(' mi spiace hai perso ')
+        }
     }
-}
 
-if(!checked){
-    if(userChoice === ('pari')){
-        console.log(' complimenti hai vinto ')
-    }else{
-        console.log(' mi spiace hai perso ')
+    if (!checked) {
+        if (userChoice === ('pari')) {
+            console.log(' complimenti hai vinto ')
+        } else {
+            console.log(' mi spiace hai perso ')
+        }
     }
-}
 
-    
+}
 
 
 
