@@ -3,6 +3,24 @@
 //Creare una funzione per capire se la parola inserita è palindroma
 
 
+
+
+let wordRequest = prompt('inserisci la parola da controllare')
+let check = isPalindrome(wordRequest)
+console.log(check)
+
+if (check) {
+    console.log(' la parola è palindroma')
+}
+else  {
+   console.log (' la parola non è palindroma')
+}
+
+
+
+// funzione 
+
+
 function isPalindrome(word) {
     let word1
     let word2 = ('')
@@ -21,24 +39,4 @@ function isPalindrome(word) {
     console.log(palindrome)
     return palindrome = word2 === word
 }
-
-
-let wordRequest = prompt('inserisci la parola da controllare')
-let check = isPalindrome(wordRequest)
-console.log(check)
-
-if (check) {
-    console.log(' la parola è palindroma')
-}
-else  {
-   console.log (' la parola non è palindroma')
-}
-
-
-
-
-
-
-
-
 
